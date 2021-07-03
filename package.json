@@ -1,0 +1,16 @@
+{
+  "name": "jest-typescript-patterns",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "start-test": "jest --watchAll"
+  },
+  "author": "adriangodong",
+  "license": "MIT",
+  "dependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.6"
+  }
+}
