@@ -10,7 +10,7 @@
   "author": "adriangodong",
   "license": "MIT",
   "dependencies": {
-    "@types/jest": "^26.0.23",
+    "@types/jest": "^26.0.24",
     "jest": "^27.0.6"
   }
 }
