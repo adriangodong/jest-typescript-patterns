@@ -1,3 +1,6 @@
+// Make this a module.
+export {}
+
 const mock = jest.fn();
 
 beforeEach(() =>

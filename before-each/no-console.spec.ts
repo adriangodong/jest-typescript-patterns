@@ -1,3 +1,6 @@
+// Make this a module.
+export {}
+
 test("console functions should not log to console", () =>
 {
     // Arrange

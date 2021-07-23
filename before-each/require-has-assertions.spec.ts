@@ -1,3 +1,6 @@
+// Make this a module.
+export {}
+
 beforeEach(() =>
 {
     // Arrange
