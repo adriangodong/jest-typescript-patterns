@@ -1,4 +1,4 @@
-// Make this a module.
+// Make this file a module.
 export {}
 
 beforeEach(() =>
@@ -7,14 +7,17 @@ beforeEach(() =>
     expect.hasAssertions();
 });
 
-test("each test must declare expect.hasAssertions to avoid no assertions", () =>
+test("void 0 should be falsy", () =>
 {
+    // Act
+    const v0 = void 0;
+
     // Assert
-    // Test will fail without the next line.
-    expect(void 0).toBeFalsy();
+    // Test will fail without the following line.
+    expect(v0).toBeFalsy();
 });
 
-test("each test must declare expect.hasAssertions to avoid no assertions when async", (done) =>
+test("setTimeout should execute callback asynchronously", (done) =>
 {
     setTimeout(() =>
     {

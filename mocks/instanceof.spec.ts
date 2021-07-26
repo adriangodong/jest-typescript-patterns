@@ -1,19 +1,20 @@
-import { isTestUtility, TestUtility } from "./lib/TestUtility";
+import { TestService } from "./lib/TestService";
+import { isTestService } from "./lib/TestUtility";
 
-test("isTestUtility should return true for a TestUtility instance", () =>
+test("isTestService should return true for a TestService instance", () =>
 {
     // Arrange
-    const mockTestUtility = Object.create(TestUtility.prototype);
+    const mockTestService = Object.create(TestService.prototype);
 
     // Act, Assert
-    expect(isTestUtility(mockTestUtility)).toBeTruthy();
+    expect(isTestService(mockTestService)).toBeTruthy();
 });
 
-test("isTestUtility should return false for a non-TestUtility instance", () =>
+test("isTestService should return false for a non-TestService instance", () =>
 {
     // Arrange
-    const mockTestUtility = {} as unknown as TestUtility;
+    const mockTestService = {} as unknown as TestService;
 
     // Act, Assert
-    expect(isTestUtility(mockTestUtility)).toBeFalsy();
+    expect(isTestService(mockTestService)).toBeFalsy();
 });

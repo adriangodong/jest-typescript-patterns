@@ -1,4 +1,4 @@
-// Make this a module.
+// Make this file a module.
 export {}
 
 class TestCaller

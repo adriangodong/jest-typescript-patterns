@@ -1,3 +1,5 @@
+import { TestService } from "./TestService";
+
 export class TestUtility
 {
     getTestString(): string
@@ -16,7 +18,7 @@ export function getTestString(): string
     return "A string from getTestString function of TestUtility module.";
 }
 
-export function isTestUtility(obj: TestUtility): boolean
+export function isTestService(obj: TestService): boolean
 {
-    return (obj instanceof TestUtility);
+    return (obj instanceof TestService);
 }
