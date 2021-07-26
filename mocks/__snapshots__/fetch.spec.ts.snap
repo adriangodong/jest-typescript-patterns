@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TestService.getApiString error should throw 1`] = `
+Response {
+  "size": 0,
+  "timeout": 0,
+  Symbol(Body internals): Object {
+    "body": Object {
+      "data": Array [
+        65,
+        80,
+        73,
+        32,
+        101,
+        114,
+        114,
+        111,
+        114,
+        32,
+        115,
+        116,
+        114,
+        105,
+        110,
+        103,
+        32,
+        102,
+        114,
+        111,
+        109,
+        32,
+        109,
+        111,
+        99,
+        107,
+        46,
+      ],
+      "type": "Buffer",
+    },
+    "disturbed": false,
+    "error": null,
+  },
+  Symbol(Response internals): Object {
+    "counter": undefined,
+    "headers": Headers {
+      Symbol(map): Object {
+        "Content-Type": Array [
+          "text/plain;charset=UTF-8",
+        ],
+      },
+    },
+    "status": 500,
+    "statusText": "Internal Server Error",
+    "url": undefined,
+  },
+}
+`;

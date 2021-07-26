@@ -1,9 +1,13 @@
-test("", () =>
+/**
+ * @jest-environment jsdom
+ */
+
+test("Create MediaStream should not fail", () =>
 {
     // Arrange
     const mockMediaStream = {};
     const mockMediaStreamCtor = jest.fn().mockImplementation(() => mockMediaStream);
-    Object.defineProperty(global, "MediaStream", {
+    Object.defineProperty(window, "MediaStream", {
         value: mockMediaStreamCtor
     });
 
@@ -14,14 +18,14 @@ test("", () =>
     expect(mediaStream).toBe(mockMediaStream);
 });
 
-test("", () =>
+test("Math.random should be random", () =>
 {
     // Arrange
     const mockRandomNumber = 2;
     const mockMath = {
         random: jest.fn().mockReturnValue(mockRandomNumber)
     };
-    Object.defineProperty(global, "Math", {
+    Object.defineProperty(window, "Math", {
         value: mockMath
     });
 

@@ -15,3 +15,8 @@ export function getTestString(): string
 {
     return "A string from getTestString function of TestUtility module.";
 }
+
+export function isTestUtility(obj: TestUtility): boolean
+{
+    return (obj instanceof TestUtility);
+}

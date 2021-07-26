@@ -23,4 +23,18 @@ export class TestService
     {
         return getTestString();
     }
+
+    async getApiString(): Promise<string>
+    {
+        const response = await fetch("https://example.com");
+
+        if (response.ok)
+        {
+            return await response.text();
+        }
+        else
+        {
+            throw response;
+        }
+    }
 }
