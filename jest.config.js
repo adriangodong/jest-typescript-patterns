@@ -1,25 +1,10 @@
 /* eslint-env node */
 
-module.exports = {
-    projects: [
-        {
-            displayName: "test",
-            transform: {
-                ".(ts|tsx)": "ts-jest"
-            },
-            moduleFileExtensions: [
-                "ts",
-                "tsx",
-                "js",
-                "json"
-            ],
-            moduleNameMapper: {
-                "\\.(less)$": "identity-obj-proxy"
-            },
-            testPathIgnorePatterns: [
-                "/node_modules/"
-            ],
-            testRegex: "\\.spec\\.(ts|tsx)$"
-        }
-    ]
+/** @type {import('@jest/types').Config.InitialOptions} */
+const config = {
+  transform: {
+    ".(ts|tsx)": "ts-jest"
+  }
 }
+
+module.exports = config;
