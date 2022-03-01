@@ -3,6 +3,45 @@ import { TestUtility, getTestString } from "./lib/TestUtility";
 
 jest.mock("./lib/TestUtility");
 
+beforeEach(() =>
+{
+    jest.clearAllMocks();
+});
+
+test("TestUtility.ctor() should return a mock object", () =>
+{
+    // Act
+    const testUtility = new TestUtility();
+
+    // Assert
+    expect(testUtility).toBeDefined();
+    // Functions will be mocked.
+    expect(testUtility.getTestString).toBeDefined();
+    // Properties will not be mocked.
+    expect(testUtility.testString).toBeUndefined();
+});
+
+test("TestUtility.ctor() should return a mock object from factory method", () =>
+{
+    // Arrange
+    (TestUtility as unknown as jest.Mock).mockImplementationOnce(() =>
+    {
+        const mockTestUtility = { getTestString: jest.fn() };
+        Object.defineProperty(mockTestUtility, "testString", { get: jest.fn().mockReturnValue("") });
+        return mockTestUtility;
+    });
+
+    // Act
+    const testUtility = new TestUtility();
+
+    // Assert
+    expect(testUtility).toBeDefined();
+    // Functions will be mocked.
+    expect(testUtility.getTestString).toBeDefined();
+    // Properties will now be mocked.
+    expect(testUtility.testString).toBeDefined();
+});
+
 test("TestService.ctor() should instantiate TestUtility", () =>
 {
     // Act
